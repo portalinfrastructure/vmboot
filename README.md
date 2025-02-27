@@ -1,12 +1,5 @@
 # vmboot
 
-* vagrantfile that can launch and configure various distros*
+This repo is a clone from the [https://github.com/holmanb/vmboot.git](https://github.com/holmanb/vmboot.git) as part of work to use Ansible playbooks with cloud-init. It will be drastically changed to accommodate the repo's owner's requirements.
 
-
-
-Note: This repo was abandoned and unused for a couple of years. I recently
-needed some ansible playbooks for a different project for test data,
-which this repo happened to work for. This required moving playbook
-locations, which may have broken the vagrantfile. I don't really care
-about that at this point, so those will
-likely remain broken for the foreseeable future.
+cloud-init, while handy, is not very flexible, is hard to troubleshoot and leads to bizarre behaviour on the host.
