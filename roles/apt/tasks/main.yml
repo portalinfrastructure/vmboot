@@ -15,15 +15,8 @@
 - name: "install packages"
   apt:
     name:
-      - git
-      - python3-pip
-      - jq
-      - curl
       - nfs-common
-      - xdg-open
       - unzip
-      - wget
-      - gpg
     update_cache: yes
     cache_valid_time: 3600
     state: latest
