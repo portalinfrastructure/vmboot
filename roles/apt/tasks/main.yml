@@ -69,3 +69,9 @@
 #     uid: 1101
 #     group: 1101
 #     home: /opt/ipc/home/woronowl
+
+# - name: Set authorized keys taken from url
+#   ansible.posix.authorized_key:
+#     user: charlie
+#     state: present
+#     key: https://github.com/seag-rvc.keys
