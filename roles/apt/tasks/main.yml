@@ -34,3 +34,38 @@
     opts: nfsvers=4.1
     state: mounted
     fstype: nfs4
+
+- name: Ensure group "infrastructure" exists
+  ansible.builtin.group:
+    name: infrastructure
+    state: present
+    gid: 1100
+     
+- name: Ensure group "support" exists
+  ansible.builtin.group:
+    name: support
+    state: present
+    gid: 1200
+
+- name: Ensure group "developers" exists
+  ansible.builtin.group:
+    name: developers
+    state: present
+    gid: 1300
+
+- name: Ensure group "networks" exists
+  ansible.builtin.group:
+    name: networks
+    state: present
+    gid: 1400
+
+# - name: Add the user 'woronowl'
+#   ansible.builtin.user:
+#     name: woronowl
+#     shell: /bin/bash
+#     groups: infrastructure
+#     append: yes
+#     create_home: yes
+#     uid: 1101
+#     group: 1101
+#     home: /opt/ipc/home/woronowl
