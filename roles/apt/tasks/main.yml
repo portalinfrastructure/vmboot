@@ -1,13 +1,25 @@
 ---
-- name: "install packages"
-  apt:
-    name: "*"
-    update_cache: yes
-    cache_valid_time: 3600
+# - name: "install packages"
+#   apt:
+#     name: "*"
+#     update_cache: yes
+#     cache_valid_time: 3600
+
+# - name: "install packages"
+#   apt:
+#     name:
+#       - "{{ item }}"
+#     state: latest
+#   loop: "{{ packages }}"
 
 - name: "install packages"
   apt:
     name:
-      - "{{ item }}"
+      - git
+      - python3-pip
+      - jq
+      - curl
+      - nfs-common
+    update_cache: yes
+    cache_valid_time: 3600
     state: latest
-  loop: "{{ packages }}"
